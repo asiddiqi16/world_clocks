@@ -3,21 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>World Clock</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1>World Clock</h1>
-    <footer>
-      This project was coded by
-      <a
-        href="https://www.shecodes.io/graduates/100445-ariba-siddiqi"
-        target="_blank"
-        >Ariba Siddiqi
-      </a>
-      and is open sourced on
-      <a href="https://github.com/asiddiqi16" target="_blank"> GitHub</a>
-    </footer>
-    <script src="./src/index.js"></script>
+    <div class="container">
+      <h1>World Clock</h1>
+      <div class="country-selector">
+        <select name="country-selected" id="countries">
+          <option value="" selected>Select a country</option>
+          <option value="Melbourne/Australia">Melbourne, AUS</option>
+          <option value="Tokyo/Pacific">Tokyo, JAP</option>
+          <option value="London/UK">London, UK</option>
+        </select>
+      </div>
+      <div class="countries-displayed">
+        <div class="country">
+          Melbourne, Australia
+          <span class="country-time">21st June 2024, 12:55PM</span>
+        </div>
+        <div class="country">
+          Tokyo, Japan
+          <span class="country-time">21st June 2024, 12:55PM</span>
+        </div>
+        <div class="country">
+          London, UK
+          <span class="country-time">21st June 2024, 12:55PM</span>
+        </div>
+      </div>
+
+      <footer>
+        This project was coded by
+        <a
+          href="https://www.shecodes.io/graduates/100445-ariba-siddiqi"
+          target="_blank"
+          >Ariba Siddiqi
+        </a>
+        and is open sourced on
+        <a href="https://github.com/asiddiqi16/world_clocks" target="_blank">
+          GitHub</a
+        >
+      </footer>
+      <script src="./src/index.js"></script>
+    </div>
   </body>
 </html>

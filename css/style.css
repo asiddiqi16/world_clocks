@@ -5,3 +5,8 @@ h1 {
 footer {
   text-align: center;
 }
+
+div.country-selector,
+div.countries-displayed {
+  text-align: center;
+}
