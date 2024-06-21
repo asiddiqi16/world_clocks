@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -25,21 +27,14 @@
         </select>
       </div>
       <div class="countries-displayed">
-        <div class="country">
+        <div class="country" id="first-city">
           <div class="country-details">
             Melbourne, Australia
-            <div class="country-date">21st June 2024</div>
+            <div class="country-date"></div>
           </div>
-          <span class="country-time"> 12:55 <small>PM</small></span>
+          <span class="country-time"></span>
         </div>
-        <div class="country">
-          <div class="country-details">
-            Melbourne, Australia
-            <div class="country-date">21st June 2024</div>
-          </div>
-          <span class="country-time"> 12:55 <small>PM</small></span>
-        </div>
-        <div class="country">
+        <div class="country" id="second-city">
           <div class="country-details">
             Melbourne, Australia
             <div class="country-date">21st June 2024</div>

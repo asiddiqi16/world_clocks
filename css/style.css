@@ -52,6 +52,12 @@ div.country {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px #22313f dashed;
+}
+div.country:last-child {
+  border: none;
 }
 div.country-details:first-child {
   font-size: 24px;
