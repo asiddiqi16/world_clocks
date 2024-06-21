@@ -1,5 +1,34 @@
+body {
+  background-image: url("/clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Noto Sans", sans-serif;
+}
+div.container {
+  background-color: #eaf6f6;
+  max-width: 750px;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
 h1 {
+  padding-top: 25px;
   text-align: center;
+  color: #22313f;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: grey;
+  font-size: 18px;
+}
+div.country-selector {
+  margin: auto 20px;
+  margin-bottom: 25px;
 }
 
 footer {
@@ -9,4 +38,33 @@ footer {
 div.country-selector,
 div.countries-displayed {
   text-align: center;
+}
+
+div.countries-displayed {
+  padding-bottom: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+  color: #22313f;
+}
+
+div.country {
+  margin: 10px 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+div.country-details:first-child {
+  font-size: 24px;
+}
+div.country-date {
+  text-align: left;
+  font-size: 18px;
+}
+span.country-time {
+  font-size: 48px;
+}
+
+span.country-time small {
+  font-size: 14px;
+  vertical-align: middle;
 }
