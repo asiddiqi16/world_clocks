@@ -1,17 +1,47 @@
-setInterval(function () {
-  let firstCity = document.querySelector("#first-city");
+function updateTime() {
+  let selectedCity = document.getElementById("countries");
 
-  let firstCityDate = firstCity.querySelector(".country-date");
+  if (selectedCity.value != "") {
+    let firstCity = document.querySelector("#first-city");
 
-  let firstCityTime = firstCity.querySelector(".country-time");
+    let firstCityDate = firstCity.querySelector(".country-date");
 
-  let cityDateTime = moment()
-    .tz("Australia/Melbourne")
-    .format("dddd, MMMM Do, YYYY h:mm:ss [<small>]A[</small>]");
+    let firstCityTime = firstCity.querySelector(".country-time");
 
-  firstCityDate.innerHTML = cityDateTime.substring(0, cityDateTime.length - 25);
-  firstCityTime.innerHTML = cityDateTime.substring(
-    cityDateTime.length - 25,
-    cityDateTime.length
-  );
-}, 1000);
+    let cityDateTime = moment()
+      .tz(selectedCity.value)
+      .format("dddd, MMMM Do, YYYY h:mm:ss [<small>]A[</small>]");
+
+    firstCityDate.innerHTML = cityDateTime.substring(
+      0,
+      cityDateTime.length - 25
+    );
+    firstCityTime.innerHTML = cityDateTime.substring(
+      cityDateTime.length - 25,
+      cityDateTime.length
+    );
+  }
+}
+
+function updateCity(event) {
+  if (event.target.value.length) {
+    cityName = event.target.value;
+
+    cityNameFriendly = cityName.replace("_", " ").split("/")[1];
+
+    let countriesDisplayedElement = document.querySelector(
+      ".countries-displayed"
+    );
+    countriesDisplayedElement.innerHTML = `<div class="country" id="first-city">
+          <div class="country-details">
+            ${cityNameFriendly}
+            <div class="country-date"></div>
+          </div>
+          <span class="country-time"></span>
+        </div>`;
+  }
+}
+setInterval(updateTime, 1000);
+let selectedCityElement = document.querySelector("#countries");
+
+selectedCityElement.addEventListener("change", updateCity);

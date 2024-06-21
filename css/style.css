@@ -56,6 +56,9 @@ div.country {
   margin-bottom: 20px;
   border-bottom: 1px #22313f dashed;
 }
+div.country-details {
+  text-align: left;
+}
 div.country:last-child {
   border: none;
 }
