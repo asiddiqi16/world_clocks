@@ -3,6 +3,8 @@
   --bg-img-night: url("/moon.jpg");
   --bg-color: #8dc6ff;
   --bg-color-night: #272343;
+  --bg-color-body: #8ec6fc;
+  --bg-color-body-night: black;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Noto Sans", sans-serif;
+  background-color: var(--bg-color-body);
 }
 div.container {
   background-color: var(--bg-color);
@@ -99,6 +102,7 @@ body.night-theme {
 body.night-theme div.container {
   background-color: var(--bg-color-night);
   box-shadow: 10px 10px 20px rgba(158, 154, 154, 0.2);
+  background-color: var(--bg-color-body-night);
 }
 
 body.night-theme div,
@@ -108,4 +112,25 @@ body.night-theme h1 {
 
 body.night-theme h1 {
   text-shadow: 0px 3px 8px rgba(211, 219, 236, 0.4);
+}
+
+@media only screen and (max-width: 650px) {
+  h1 {
+    font-size: 30px;
+  }
+  span.country-time {
+    font-size: 22px;
+  }
+
+  span.country-time small {
+    font-size: 12px;
+    vertical-align: middle;
+  }
+
+  div.country-details:first-child {
+    font-size: 16px;
+  }
+  div.country-date {
+    font-size: 12px;
+  }
 }
