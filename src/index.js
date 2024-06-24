@@ -12,9 +12,10 @@ function updateCityDateTime(cityDateTime) {
 }
 function updateTime() {
   let selectedCity = document.getElementById("countries");
-  if (selectedCity.value != "") {
+
+  if ((selectedCity.value != "") & (selectedCity.value != "current")) {
     let cityDateTime = moment()
-      .tz(cityName)
+      .tz(selectedCity.value)
       .format("dddd, MMMM Do, YYYY h:mm:ss [<small>]A[</small>]");
     updateCityDateTime(cityDateTime);
   } else {
@@ -26,7 +27,7 @@ function updateTime() {
 }
 
 function updateCity(event) {
-  if (event.target.value.length) {
+  if (event.target.value.length & (event.target.value != "current")) {
     cityName = event.target.value;
   } else {
     cityName = moment.tz.guess();
