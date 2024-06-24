@@ -98,11 +98,11 @@ select#countries {
 body.night-theme {
   background-image: var(--bg-img-night);
   color: white;
+  background-color: var(--bg-color-body-night);
 }
 body.night-theme div.container {
   background-color: var(--bg-color-night);
   box-shadow: 10px 10px 20px rgba(158, 154, 154, 0.2);
-  background-color: var(--bg-color-body-night);
 }
 
 body.night-theme div,

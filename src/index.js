@@ -56,11 +56,18 @@ function updateCityDateTime(cityDateTime) {
   );
 
   let timeOfDay = cityDateTime.split("<small>")[1].split("</small>")[0];
+  let hours = cityDateTime.split(":")[0];
+  hours = parseInt(hours.substring(hours.length - 2, hours.length));
+
   let bodyElement = document.querySelector("body");
-  if (timeOfDay == "AM") {
-    bodyElement.classList.remove("night-theme");
-  } else {
+
+  if (
+    ((timeOfDay == "AM") & (hours < 6)) |
+    ((timeOfDay == "PM") & (hours >= 6) & (hours < 12))
+  ) {
     bodyElement.classList.add("night-theme");
+  } else {
+    bodyElement.classList.remove("night-theme");
   }
 }
 function updateTime() {
