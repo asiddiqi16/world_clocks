@@ -1,16 +1,24 @@
+:root {
+  --bg-img-day: url("/clouds2.jpg");
+  --bg-img-night: url("/moon.jpg");
+  --bg-color: #8dc6ff;
+  --bg-color-night: #272343;
+}
+
 body {
-  background-image: url("/clouds.jpg");
+  background-image: var(--bg-img-day);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Noto Sans", sans-serif;
 }
 div.container {
-  background-color: #eaf6f6;
+  background-color: var(--bg-color);
   max-width: 750px;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 50px;
   margin-bottom: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 h1 {
   padding-top: 25px;
@@ -18,6 +26,7 @@ h1 {
   color: #22313f;
   font-size: 48px;
   text-transform: uppercase;
+  text-shadow: 0px 3px 8px rgba(36, 88, 201, 0.4);
 }
 select {
   width: 100%;
@@ -76,4 +85,27 @@ span.country-time {
 span.country-time small {
   font-size: 14px;
   vertical-align: middle;
+}
+select#countries {
+  background-color: #cfe1f3;
+  border-color: #22313f;
+  color: #31465a;
+}
+
+body.night-theme {
+  background-image: var(--bg-img-night);
+  color: white;
+}
+body.night-theme div.container {
+  background-color: var(--bg-color-night);
+  box-shadow: 10px 10px 20px rgba(158, 154, 154, 0.2);
+}
+
+body.night-theme div,
+body.night-theme h1 {
+  color: white;
+}
+
+body.night-theme h1 {
+  text-shadow: 0px 3px 8px rgba(211, 219, 236, 0.4);
 }
